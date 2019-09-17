@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lan.spring.mapper.UserMapper">
+    <delete id="delUserById">
+        delete from user where id = #{id}
+    </delete>
+
+    <select id="selectUser" resultType="com.lan.spring.bean.User">
+        select * from user where id = #{id}
+    </select>
+    <select id="selectUsers" resultType="com.lan.spring.bean.User">
+        select * from user
+    </select>
+</mapper>
